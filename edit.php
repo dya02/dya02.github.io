@@ -1,0 +1,21 @@
+<?php
+	session_start();
+	if(isset($_POST['edit'])){
+		$users = simplexml_load_file('files/members.xml');
+		foreach($users->user as $user){
+			if($user->id == $_POST['id']){
+				$user->firstname = $_POST['uname'];
+				$user->lastname = $_POST['password'];
+				break;
+			}
+		}
+		file_put_contents('files/members.xml', $users->asXML());
+		$_SESSION['message'] = 'Member updated successfully';
+		header('location: index.php');
+	}
+	else{
+		$_SESSION['message'] = 'Select member to edit first';
+		header('location: index.php');
+	}
+
+?>

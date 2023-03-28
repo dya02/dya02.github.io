@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<users>
+  <user>
+    <id>3210790</id>
+    <uname>diana.azarcon@ctu.edu.ph</uname>
+    <password>12345</password>
+  </user>
+  <user>
+    <id>3210791</id>
+    <uname>dya@gmail.com</uname>
+    <password>123</password>
+  </user>
+</users>
